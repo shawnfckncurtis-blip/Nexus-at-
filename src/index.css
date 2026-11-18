@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Space Grotesk', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #05020d;
+  color: #f0f6ff;
+  line-height: 24px;
+  overscroll-behavior: none;
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 50% 35%, rgba(0, 240, 255, 0.16), transparent 55%),
+    radial-gradient(circle at 75% 75%, rgba(255, 0, 127, 0.14), transparent 50%),
+    linear-gradient(180deg, #060312 0%, #0a041f 60%, #05020d 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+a {
+  color: #00f0ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  text-transform: uppercase;
+  pointer-events: auto;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+#XRButtonWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.75rem;
+  text-align: center;
+  pointer-events: none;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+#XRButtonWrapper > * {
+  pointer-events: auto;
+}
+
+#XRButtonWrapper h1 {
+  font-family: 'Orbitron', 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  margin: 0;
+  color: #ffffff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 24px rgba(0, 240, 255, 0.55),
+    0 0 48px rgba(255, 0, 127, 0.35);
+}
+
+#XRButtonWrapper p {
+  max-width: 540px;
+  margin: 0;
+  color: rgba(214, 232, 255, 0.8);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.XRButton {
+  background: linear-gradient(135deg, #00f0ff 0%, #7b2cbf 50%, #ff007f 100%);
+  color: #060312;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 14px;
+  font-family: 'Orbitron', 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 20px 40px;
+  min-width: 260px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow:
+    0 0 28px rgba(0, 240, 255, 0.35),
+    0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+.XRButton::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.9998 4.66699L12.3548 6.31199L18.8648 12.8337H4.6665V15.167H18.8648L12.3548 21.6887L13.9998 23.3337L23.3332 14.0003L13.9998 4.66699Z' fill='%23060312'/%3E%3C/svg%3E")
+    no-repeat center center;
+  background-size: contain;
+}
+
+.XRButton:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow:
+    0 0 38px rgba(0, 240, 255, 0.55),
+    0 10px 36px rgba(255, 0, 127, 0.35);
+}
+
+.XRButton:active {
+  transform: scale(0.98);
+}
